@@ -19,6 +19,11 @@ namespace LoginApp
             PassTextBox.PasswordChar = '•';
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             string user = "me";
@@ -33,7 +38,7 @@ namespace LoginApp
             }
             try
             {
-                string MyConnection = "datasource=connection;port=3306;username=connection;password=@12345";
+                /*string MyConnection = "server=den1.mysql6.gear.host;uid=connection;pwd=@12345;database=connection";
                 MySqlConnection MyConn = new MySqlConnection(MyConnection);
                 MySqlCommand MyCommand = new MySqlCommand("select * from connection where user_name='" + this.UserTextBox.Text + "' and password='" + this.PassTextBox.Text + "' ;", MyConn);
                 MySqlDataReader MyReader;
@@ -66,13 +71,13 @@ namespace LoginApp
                 {
                     MessageBox.Show("Username and password is incorrect.\nPleas try again.");
                 }
-                MyConn.Close();
+                MyConn.Close();*/
 
             }
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
             }
         }
     }
